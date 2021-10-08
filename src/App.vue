@@ -1,26 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<fake></fake>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Fake from './components/fake/fake.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Fake
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+    height: 100%;
 }
 </style>

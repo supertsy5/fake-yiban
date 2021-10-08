@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex: none;
+    height: 40px;
+    align-items: center;
+    background-color: #6cb0f9;
+    color: white;
+}
+
+.button-back, .button-close, .button-menu {
+    height: 100%;
+    width: 40px;
+}
+
+.title {
+    font-size: 18px;
+    flex: auto;
+}
+
+.hx-content {
+    flex: auto;
+}
+
+.hx-detail-statusIcon {
+    top: 50px !important;
+}

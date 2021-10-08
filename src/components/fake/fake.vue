@@ -1,35 +1,20 @@
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>{{student_name}}的请销假</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
-    <meta content="telephone=no" name="format-detection">
-    <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="./umi.780e88b3.css">
-    <script charset="utf-8" src="./layouts__index.721bf05c.async.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="./vendors~p__approve__index~p__index~p__initiate__index~p__preview__index~p__share__index.41a291b0.chunk.css">
-    <script charset="utf-8"
-        src="./vendors~p__approve__index~p__index~p__initiate__index~p__preview__index~p__share__index.4427b872.async.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="./vendors~p__approve__index~p__initiate__index~p__preview__index~p__share__index.5de02372.chunk.css">
-    <script charset="utf-8"
-        src="./vendors~p__approve__index~p__initiate__index~p__preview__index~p__share__index.c5bb4fe7.async.js"></script>
-    <link rel="stylesheet" type="text/css" href="./vendors~p__approve__index~p__share__index.8593bd49.chunk.css">
-    <script charset="utf-8" src="./vendors~p__approve__index~p__share__index.b608f471.async.js"></script>
-    <link rel="stylesheet" type="text/css" href="./vendors~p__approve__index.4c338eb8.chunk.css">
-    <script charset="utf-8" src="./vendors~p__approve__index.967f8682.async.js"></script>
-    <link rel="stylesheet" type="text/css" href="./p__approve__index.a843def6.chunk.css">
-    <script charset="utf-8" src="./p__approve__index.5381d8df.async.js"></script>
-</head>
-
-<body>
+<template>
     <div id="root">
         <div class="hx-layout">
+            <div class='header'>
+                <div class='button-back'>
+                    <img src='./back.svg'/>
+                </div>
+                <div class='title'>{{studentName}}的请销假</div>
+                <div class='button-close'>
+                    <img src='./close.svg'/>
+                </div>
+                <div class='button-menu'>
+                    <img src='./menu.svg'/>
+                </div>
+            </div>
             <main class="hx-content">
-                <div class="wfTitle___Y-ebx">{{student_name}}的请销假</div>
+                <div class="wfTitle___Y-ebx">{{studentName}}的请销假</div>
                 <div class="hx-detail">
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
@@ -44,7 +29,7 @@
                                             <div class="hx-detail-item-field">
                                                 <div
                                                     class="am-flexbox am-flexbox-justify-start am-flexbox-align-center">
-                                                    {{student_name}}({{student_id}})</div>
+                                                    {{studentName}}({{studentID}})</div>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +45,7 @@
                         </div>
                         <div class="hx-detail-content">
                             <div class="hx-detail-item"><span class="hx-detail-item-label">审批编号</span>
-                                <div class="hx-detail-item-field">{{audit_id}}</div>
+                                <div class="hx-detail-item-field">{{auditID}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">是否离校</span>
                                 <div class="hx-detail-item-field">是</div>
@@ -75,10 +60,10 @@
                                 <div class="hx-detail-item-field"></div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">开始时间</span>
-                                <div class="hx-detail-item-field">{{start_time}}</div>
+                                <div class="hx-detail-item-field">{{startTime}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">结束时间</span>
-                                <div class="hx-detail-item-field">{{end_time}}</div>
+                                <div class="hx-detail-item-field">{{endTime}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">时长</span>
                                 <div class="hx-detail-item-field">{{hours}}</div>
@@ -87,13 +72,13 @@
                                 <div class="hx-detail-item-field">{{type}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">本人联系电话</span>
-                                <div class="hx-detail-item-field">{{student_phone}}</div>
+                                <div class="hx-detail-item-field">{{studentPhone}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">紧急联系人</span>
-                                <div class="hx-detail-item-field">{{emergency_contact}}</div>
+                                <div class="hx-detail-item-field">{{emergencyContact}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">紧急联系电话</span>
-                                <div class="hx-detail-item-field">{{emergency_phone}}</div>
+                                <div class="hx-detail-item-field">{{emergencyPhone}}</div>
                             </div>
                             <div class="hx-detail-item"><span class="hx-detail-item-label">请假原因</span>
                                 <div class="hx-detail-item-field">
@@ -103,16 +88,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="hx-detail">
+                <div class="hx-detail" v-if='approvers'>
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
                             <div class="hx-title-detail-dot"></div>审批进度
                         </div>
                         <div class="hx-detail-content">
                             <div class="flowInfo___244V-">
-                                <div class="flownode___1GTd6 node2___1yk73" v-for='num, approver of approvers'>
-                                    <div class="nodestate___Npp7u"><span>通过</span><span
-                                            class="stateTime___2bJzR">{{state_time}}</span></div>
+                                <div class="flownode___1GTd6 node2___1yk73" v-for='approver, num of approvers' :key='num'>
+                                    <div class="nodestate___Npp7u"><span>通过</span>
+                                    <span class="stateTime___2bJzR" v-if='num == approvers.length - 1'>{{approver.time}}</span></div>
                                     <div class="nodeleft___2q7Sg"><span class="nodeindex___Cya0J">{{num + 1}}</span></div>
                                     <div class="noderight___urUWJ">
                                         <div style="margin-top: 0px;" class="nodeapprover___1KJaE">
@@ -138,21 +123,67 @@
                         </div>
                         <div class="hx-detail-content">
                             <div class="ccInfo___T7Slb">
-                                <div v-for='cc of ccs'>{{cc.name}}({{cc.id}})</div>
+                                <div v-for='cc, num of ccs' :key='num'>{{cc.name}}({{cc.id}})</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
-            <div class="hx-footer"><a role="button" class="am-button hx-footer_btn" style="color: rgb(87, 191, 242);"
+            <div class="hx-footer">
+                <a role="button" class="am-button hx-footer_btn" style="color: rgb(87, 191, 242);"
                     aria-disabled="false"><span>转发审批表单</span></a></div>
         </div>
+        <img class="hx-detail-statusIcon" src="./initiate-2.0a5010df.png">
     </div>
+</template>
 
-    <script src="./umi.4de2e851.js"></script>
+<script>
+export default {
+    name: 'fake',
+    data(){
+        return {
+            studentName: 'Alice',
+            studentID: '2102020212',
+            auditID: '20220101080000000000',
+            startTime: '2022-01-01 08:00',
+            endTime: '2022-01-02 08:00',
+            hours: 24,
+            type: '事假',
+            studentPhone: '15804016942',
+            emergencyContact: 'Bob',
+            emergencyPhone: '19818840640',
+            reason: '回家休息；本人承诺:请假事由真实，每天按时检测本人健康情况；对自己出行轨迹负责；出行途中做好个人防护；返校第一时间报告并严格执行学校防疫规定。',
+            approvers: [
+                {
+                    name: 'Nancy',
+                    id: '20211',
+                    time: '08:30'
+                },
+                {
+                    name: 'Rita',
+                    id: '20213',
+                    time: '09:00'
+                }
+            ],
+            ccs: [
+                {
+                    name: 'Amy',
+                    id: '20214'
+                },
+                {
+                    name: 'Bailey',
+                    id: '20215'
+                }
+            ]
+        }
+    }
+}
+</script>
 
-
-    <img class="hx-detail-statusIcon" src="./initiate-2.0a5010df.png">
-</body>
-
-</html>
+<style src="./fake.css"></style>
+<style src="./780e88b3.css"></style>
+<style src="./41a291b0.chunk.css"></style>
+<style src="./5de02372.chunk.css"></style>
+<style src="./8593bd49.chunk.css"></style>
+<style src="./4c338eb8.chunk.css"></style>
+<style src="./a843def6.chunk.css"></style>
