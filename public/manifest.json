@@ -4,17 +4,17 @@
     "start_url": ".",
     "display": "standalone",
     "description": "不一般的易班",
-    "background_color": "white",
+    "background_color": "#6cb0f9",
     "theme_color": "#6cb0f9",
     "lang": "zh-CN",
     "icons": [
         {
-            "src": "favicon.ico",
+            "src": "/fake-yiban/dist/favicon.ico",
             "sizes": "64x64",
             "type": "image/x-icon"
         },
         {
-            "src": "favicon.png",
+            "src": "fake-yiban/dist/favicon.png",
             "sizes": "64x64",
             "type": "image/png"
         }
