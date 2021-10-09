@@ -1,0 +1,16 @@
+{
+    "name": "Fake Yiban: 不一般的易班",
+    "short_name": "Fake Yiban",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "An extraordinary Yiban.",
+    "background_color": "white",
+    "theme_color": "#6cb0f9",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        }
+    ]
+}
