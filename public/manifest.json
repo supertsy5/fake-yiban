@@ -17,6 +17,11 @@
             "src": "favicon.png",
             "sizes": "64x64",
             "type": "image/png"
+        },
+        {
+            "src": "favicon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
         }
     ]
 }
