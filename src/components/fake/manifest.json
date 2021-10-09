@@ -1,0 +1,9 @@
+{
+    "name": "FakeYiban",
+    "short_name": "FakeYiban",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "An extraordinary Yiban.",
+    "background_color": "white",
+    "theme_color": "#6cb0f9"
+}

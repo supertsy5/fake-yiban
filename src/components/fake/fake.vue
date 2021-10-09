@@ -44,46 +44,9 @@
                             <div class="hx-title-detail-dot"></div>申请内容
                         </div>
                         <div class="hx-detail-content">
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">审批编号</span>
-                                <div class="hx-detail-item-field">{{auditID}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">是否离校</span>
-                                <div class="hx-detail-item-field">是</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">是否离开沈阳</span>
-                                <div class="hx-detail-item-field">否</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">是否离开辽宁省</span>
-                                <div class="hx-detail-item-field">否</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">前往省份、城市</span>
-                                <div class="hx-detail-item-field"></div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">开始时间</span>
-                                <div class="hx-detail-item-field">{{startTime}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">结束时间</span>
-                                <div class="hx-detail-item-field">{{endTime}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">时长</span>
-                                <div class="hx-detail-item-field">{{hours}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">请假类型</span>
-                                <div class="hx-detail-item-field">{{type}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">本人联系电话</span>
-                                <div class="hx-detail-item-field">{{studentPhone}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">紧急联系人</span>
-                                <div class="hx-detail-item-field">{{emergencyContact}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">紧急联系电话</span>
-                                <div class="hx-detail-item-field">{{emergencyPhone}}</div>
-                            </div>
-                            <div class="hx-detail-item"><span class="hx-detail-item-label">请假原因</span>
-                                <div class="hx-detail-item-field">
-                                    {{reason}}
-                                </div>
+                            <div class="hx-detail-item" v-for="item of items" :key='item'>
+                                <span class="hx-detail-item-label">{{item.name}}</span>
+                                <div class="hx-detail-item-field">{{item.value}}</div>
                             </div>
                         </div>
                     </div>
@@ -133,49 +96,19 @@
                 <a role="button" class="am-button hx-footer_btn" style="color: rgb(87, 191, 242);"
                     aria-disabled="false"><span>转发审批表单</span></a></div>
         </div>
-        <img class="hx-detail-statusIcon" src="./initiate-2.0a5010df.png">
+        <img class="hx-detail-statusIcon" src="./approved.png">
     </div>
 </template>
 
 <script>
 export default {
     name: 'fake',
-    data(){
-        return {
-            studentName: 'Alice',
-            studentID: '2102020212',
-            auditID: '20220101080000000000',
-            startTime: '2022-01-01 08:00',
-            endTime: '2022-01-02 08:00',
-            hours: 24,
-            type: '事假',
-            studentPhone: '15804016942',
-            emergencyContact: 'Bob',
-            emergencyPhone: '19818840640',
-            reason: '回家休息；本人承诺:请假事由真实，每天按时检测本人健康情况；对自己出行轨迹负责；出行途中做好个人防护；返校第一时间报告并严格执行学校防疫规定。',
-            approvers: [
-                {
-                    name: 'Nancy',
-                    id: '20211',
-                    time: '08:30'
-                },
-                {
-                    name: 'Rita',
-                    id: '20213',
-                    time: '09:00'
-                }
-            ],
-            ccs: [
-                {
-                    name: 'Amy',
-                    id: '20214'
-                },
-                {
-                    name: 'Bailey',
-                    id: '20215'
-                }
-            ]
-        }
+    props: {
+        studentName: String,
+        studentID: String,
+        items: Array,
+        approvers: Array,
+        ccs: Array
     }
 }
 </script>

@@ -74,7 +74,7 @@
  display:-ms-flexbox;
  display:flex;
  -ms-flex-pack:start;
- justify-content:start;
+ justify-content:flex-start;
  background-color:#fff;
  -ms-flex-negative:0;
  flex-shrink:0

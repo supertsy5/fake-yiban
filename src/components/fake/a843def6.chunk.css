@@ -94,7 +94,7 @@
  display:flex;
  padding-top:10px;
  -ms-flex-align:start;
- align-items:start
+ align-items:flex-start
 }
 .row___14IfN>.label___3XtrB {
  width:22%;
