@@ -9,12 +9,12 @@
     "lang": "zh-CN",
     "icons": [
         {
-            "src": "/fake-yiban/dist/favicon.ico",
+            "src": "favicon.ico",
             "sizes": "64x64",
             "type": "image/x-icon"
         },
         {
-            "src": "fake-yiban/dist/favicon.png",
+            "src": "favicon.png",
             "sizes": "64x64",
             "type": "image/png"
         }

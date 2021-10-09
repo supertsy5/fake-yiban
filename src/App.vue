@@ -89,7 +89,7 @@ export default {
                     name: 'Bailey',
                     id: '20215'
                 }
-        ]
+            ]
         }
     }
 }
