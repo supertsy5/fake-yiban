@@ -6,6 +6,7 @@
     "description": "An extraordinary Yiban.",
     "background_color": "white",
     "theme_color": "#6cb0f9",
+    "lang": "zh-CN",
     "icons": [
         {
             "src": "/favicon.ico",
