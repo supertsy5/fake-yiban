@@ -1,5 +1,7 @@
 # fake-yiban
 
+[Start](https://supertsy5.github.io/fake-yiban/dist/)
+
 ## Project setup
 ```
 npm install
