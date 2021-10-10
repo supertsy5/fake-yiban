@@ -1,0 +1,65 @@
+html, body{
+    background-color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+input{
+    display: block;
+    flex: 1 1 0;
+    border: 1px solid gray;
+    margin: 1px;
+    min-width: 0;
+}
+
+button{
+    display: block;
+    border: none;
+    border-radius: 2px;
+    margin: 1px;
+    background-color: #6cb0f9;
+    color: white;
+}
+
+.edit{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+}
+
+.row.labels{
+    padding-right: 26px;
+}
+
+.label{
+    flex: 1 1 0;
+    margin: 0 4px;
+}
+
+.delete{
+    width: 24px;
+}
+
+.add{
+    width: 64px;
+    margin: 1px auto;
+}
+
+.final{
+    font-size: large;
+    text-align: center;
+}
+
+.go{
+    margin: 8px auto;
+    width: 128px;
+}

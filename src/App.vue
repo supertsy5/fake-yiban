@@ -1,6 +1,64 @@
 <template>
-    <fake :student-name='studentName' :studentID="studentID"
-    :items='items' :approvers="approvers" :ccs="ccs"></fake>
+    <div class='edit' v-if='!display'>
+        <h1>Fake Yiban: 不一般的易班 v0.1</h1>
+        <div class='s1'>
+            <h3>学生信息</h3>
+            <div class='row'>
+                <div class='label'>姓名</div>
+                <div class='label'>学号</div>
+            </div>
+            <div class='row'>
+                <input type='text' v-model='studentName'>
+                <input type='text' v-model='studentID'>
+            </div>
+        </div>
+        <div class='s2'>
+            <h3>请假信息</h3>
+            <div class='row labels'>
+                <div class='label'>项目</div>
+                <div class='label'>内容</div>
+            </div>
+            <div class='row' v-for='item, num in items' :key='item'>
+                <input type='text' v-model='item.name'>
+                <input type='text' v-model='item.value'>
+                <button class='delete' @click="items.splice(num, 1)">X</button>
+            </div>
+            <button class='add' @click="items.push({name: '', value: ''})">+</button>
+        </div>
+        <div class='s3'>
+            <h3>审批进度</h3>
+            <div class='row labels'>
+                <div class='label'>姓名</div>
+                <div class='label'>编号</div>
+                <div class='label'>时间</div>
+            </div>
+            <div class='row' v-for='approver, num in approvers' :key='approver'>
+                <input type='text' v-model='approver.name'>
+                <input type='text' v-model='approver.id'>
+                <input type='text' v-model='approver.time'>
+                <button class='delete' @click="approvers.splice(num, 1)">X</button>
+            </div>
+            <button class='add' @click="approvers.push({name: '', id: '', time: ''})">+</button>
+        </div>
+        <div class='s4'>
+            <h3>抄送</h3>
+            <div class='row labels'>
+                <div class='label'>姓名</div>
+                <div class='label'>编号</div>
+            </div>
+            <div class='row' v-for='cc, num in ccs' :key='cc'>
+                <input type='text' v-model='cc.name'>
+                <input type='text' v-model='cc.id'>
+                <button class='delete' @click="ccs.splice(num, 1)">X</button>
+            </div>
+            <button class='add' @click="ccs.push({name: '', id: ''})">+</button>
+        </div>
+        <div class='final'>
+            <button class='go' @click='display=true'>GO!</button>
+        </div>
+    </div>
+    <fake v-if='display' :student-name='studentName' :studentID="studentID"
+    :items='items' :approvers="approvers" :ccs="ccs" @exit='display=false'></fake>
 </template>
 
 <script>
@@ -12,8 +70,9 @@ export default {
     },
     data(){
         return {
-            studentName: 'Alice',
-            studentID: '2102020212',
+            display: false,
+            studentName: 'Example',
+            studentID: '1234567890',
             items: [
                 {
                     name: "审批编号",
@@ -37,11 +96,11 @@ export default {
                 },
                 {
                     name: "开始时间",
-                    value: "2022-01-01 08:00"
+                    value: "2021-01-01 08:00"
                 },
                 {
                     name: "结束时间",
-                    value: "2022-01-02 08:00"
+                    value: "2021-01-02 08:00"
                 },
                 {
                     name: "时长",
@@ -53,46 +112,26 @@ export default {
                 },
                 {
                     name: "本人联系电话",
-                    value: "15804016942"
+                    value: ""
                 },
                 {
                     name: "紧急联系人",
-                    value: "Bob"
+                    value: ""
                 },
                 {
                     name: "紧急联系电话",
-                    value: "19818840640"
+                    value: ""
                 },
                 {
                     name: "请假原因",
-                    value: "周末放假回家；本人承诺:请假事由真实，每天按时检测本人健康情况；对自己出行轨迹负责；出行途中做好个人防护；返校第一时间报告并严格执行学校防疫规定。"
+                    value: ""
                 }
             ],
-            approvers: [
-                {
-                    name: 'Nancy',
-                    id: '20211',
-                    time: '08:30'
-                },
-                {
-                    name: 'Rita',
-                    id: '20213',
-                    time: '09:00'
-                }
-            ],
-            ccs: [
-                {
-                    name: 'Amy',
-                    id: '20214'
-                },
-                {
-                    name: 'Bailey',
-                    id: '20215'
-                }
-            ]
+            approvers: [],
+            ccs: []
         }
     }
 }
 </script>
 
-<style></style>
+<style src='./app.css'></style>

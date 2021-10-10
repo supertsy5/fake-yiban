@@ -2,7 +2,7 @@
     <div id="root">
         <div class="hx-layout">
             <div class='header'>
-                <div class='button-back'>
+                <div class='button-back' @click="$emit('exit')">
                     <img src='./back.svg'/>
                 </div>
                 <div class='title'>{{studentName}}的请销假</div>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hx-detail" v-if='approvers'>
+                <div class="hx-detail" v-if='approvers.length > 0'>
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
                             <div class="hx-title-detail-dot"></div>审批进度
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hx-detail" v-if='ccs'>
+                <div class="hx-detail" v-if='ccs.length > 0'>
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
                             <div class="hx-title-detail-dot"></div>已抄送
@@ -103,6 +103,7 @@
 <script>
 export default {
     name: 'fake',
+    emits: ['exit'],
     props: {
         studentName: String,
         studentID: String,
