@@ -9,6 +9,12 @@ module.exports = {
         manifestOptions: {
             name: 'Fake Yiban: 不一般的易班',
             background_color: 'white'
+        },
+        workboxOptions: {
+            cleanupOutdatedCaches: true,
+            exclude: [
+                '/manifest.json'
+            ]
         }
     }
 }
