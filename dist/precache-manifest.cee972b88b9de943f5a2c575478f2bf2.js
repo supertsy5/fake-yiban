@@ -4,14 +4,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/css/app.e02ebeb2.css"
   },
   {
-    "revision": "74a47c1b6c7d01840f5caa86d7260f16",
-    "url": "/fake-yiban/dist/favicon.png"
-  },
-  {
-    "revision": "0009ddfac2b38685411c640d5b23e101",
-    "url": "/fake-yiban/dist/favicon192.png"
-  },
-  {
     "revision": "5e8ced678248d0f8a44c2e0752bc3b02",
     "url": "/fake-yiban/dist/img/approved.5e8ced67.png"
   },
@@ -28,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/img/menu.c6c92fec.svg"
   },
   {
-    "revision": "5272d6497366ff086c68c82680fd1c90",
+    "revision": "7ab21e314e7c802f4415aff28a7c907a",
     "url": "/fake-yiban/dist/index.html"
   },
   {
