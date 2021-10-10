@@ -1,7 +1,9 @@
-module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
+const publicPath = process.env.NODE_ENV === 'production'
         ? '/fake-yiban/dist/'
-        : '/',
+        : '/';
+
+module.exports = {
+    publicPath,
     pwa: {
         name: 'Fake Yiban',
         themeColor: '#6cb0f9',
@@ -10,10 +12,12 @@ module.exports = {
             name: 'Fake Yiban: 不一般的易班',
             background_color: 'white'
         },
+
         workboxOptions: {
             cleanupOutdatedCaches: true,
             exclude: [
-                '/manifest.json'
+                publicPath + 'manifest.json',
+                publicPath + 'robots.txt'
             ]
         }
     }
