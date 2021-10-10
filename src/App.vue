@@ -3,11 +3,11 @@
         <h1>Fake Yiban: 不一般的易班 v0.1</h1>
         <div class='s1'>
             <h3>学生信息</h3>
-            <div class='row'>
+            <div class='row labels'>
                 <div class='label'>姓名</div>
                 <div class='label'>学号</div>
             </div>
-            <div class='row'>
+            <div class='row labels'>
                 <input type='text' v-model='studentName'>
                 <input type='text' v-model='studentID'>
             </div>
