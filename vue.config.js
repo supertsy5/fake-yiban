@@ -16,8 +16,8 @@ module.exports = {
         workboxOptions: {
             cleanupOutdatedCaches: true,
             exclude: [
-                publicPath + 'manifest.json',
-                publicPath + 'robots.txt'
+                'manifest.json',
+                'robots.txt'
             ]
         }
     }

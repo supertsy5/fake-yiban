@@ -106,13 +106,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "11812159e283fdda5159",
     "url": "/fake-yiban/dist/js/chunk-vendors.0ca36a88.js.map"
-  },
-  {
-    "revision": "d962cad20740c8cc61c4814769cf730c",
-    "url": "/fake-yiban/dist/manifest.json"
-  },
-  {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "/fake-yiban/dist/robots.txt"
   }
 ]);
