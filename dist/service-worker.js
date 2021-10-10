@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fake-yiban/dist/precache-manifest.1a54b4c1a3dcacf445e69b444c6749fe.js"
+  "/fake-yiban/dist/precache-manifest.5a487b3721b3d29231d01f5cd88381fb.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "fake-yiban"});
@@ -32,3 +32,5 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.precaching.cleanupOutdatedCaches();
