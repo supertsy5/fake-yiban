@@ -8,7 +8,7 @@ module.exports = {
         msTileColor: '#6cb0f9',
         manifestOptions: {
             name: 'Fake Yiban: 不一般的易班',
-            background_olor: '#6cb0f9'
+            background_color: '#6cb0f9'
         }
     }
 }
