@@ -1,6 +1,6 @@
 <template>
     <div class='edit' v-if='!display'>
-        <h1>Fake Yiban: 不一般的易班 v0.1</h1>
+        <h1>Fake Yiban v0.1</h1>
         <div class='s1'>
             <h3>学生信息</h3>
             <div class='row labels'>
@@ -138,10 +138,14 @@ export default {
         }
     },
     mounted(){
-        let lastData = window.localStorage.getItem('last-data');
-        if(lastData){
-            this.$data = JSON.parse(lastData);
-            alert(lastData);
+        let lastDataJson = window.localStorage.getItem('last-data');
+        if(lastDataJson){
+            let data = JSON.parse(lastDataJson);
+            this.studentName = data.studentName;
+            this.studentID = data.studentID;
+            this.items = data.items;
+            this.approvers = data.approvers;
+            this.ccs = data.ccs;
         }
     }
 }
