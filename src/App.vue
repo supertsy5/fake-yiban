@@ -54,7 +54,7 @@
             <button class='add' @click="ccs.push({name: '', id: ''})">+</button>
         </div>
         <div class='final'>
-            <button class='go' @click='display=true'>GO!</button>
+            <button class='go' @click='go'>GO!</button>
         </div>
     </div>
     <fake v-if='display' :student-name='studentName' :studentID="studentID"
@@ -129,6 +129,19 @@ export default {
             ],
             approvers: [],
             ccs: []
+        }
+    },
+    methods: {
+        go(){
+            window.localStorage.setItem('last-data', JSON.stringify(this.$data));
+            this.display = true;
+        }
+    },
+    mounted(){
+        let lastData = window.localStorage.getItem('last-data');
+        if(lastData){
+            this.$data = JSON.parse(lastData);
+            alert(lastData);
         }
     }
 }
