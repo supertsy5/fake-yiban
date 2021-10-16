@@ -1,6 +1,6 @@
 <template>
     <div class='edit' v-if='!display'>
-        <h1>Fake Yiban v0.1</h1>
+        <h1>Fake Yiban v0.1.0 (Alpha)</h1>
         <div class='s1'>
             <h3>学生信息</h3>
             <div class='row labels'>
