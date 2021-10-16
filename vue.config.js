@@ -14,11 +14,7 @@ module.exports = {
         },
 
         workboxOptions: {
-            cleanupOutdatedCaches: true,
-            exclude: [
-                'manifest.json',
-                'robots.txt'
-            ]
+            cleanupOutdatedCaches: true
         }
     }
 }
