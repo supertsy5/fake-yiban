@@ -1,4 +1,4 @@
-# fake-yiban
+# fake-yiban: The Extraordinary Yiban
 
 [Start](https://supertsy5.github.io/fake-yiban/dist/)
 
