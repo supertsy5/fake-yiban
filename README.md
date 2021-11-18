@@ -2,7 +2,7 @@
 
 Fake Yiban: 不一般的易班
 
-[Start](https://supertsy5.github.io/fake-yiban/dist/)
+# [Start](https://supertsy5.github.io/fake-yiban/dist/)
 
 WARNING: This program should not be used for illegal proposes. Use it at your own risk.
 

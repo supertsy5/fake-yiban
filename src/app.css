@@ -1,9 +1,16 @@
 html, body{
     background-color: white;
+    overflow: hidden;
 }
 
 *{
     box-sizing: border-box;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 input{
@@ -14,18 +21,30 @@ input{
     min-width: 0;
 }
 
+.header {
+    display: flex;
+    flex: none;
+    height: 48px;
+    align-items: center;
+    background-color: #6cb0f9;
+    color: white;
+}
+
+.content{
+    min-height: 0;
+    overflow: auto;
+}
+
 button{
     display: block;
     border: none;
-    border-radius: 2px;
     margin: 1px;
     background-color: #6cb0f9;
     color: white;
 }
 
-.edit{
-    max-width: 1024px;
-    margin: 0 auto;
+.edit .header{
+    padding: 0 16px;
 }
 
 h1{
@@ -55,11 +74,30 @@ h1{
 }
 
 .final{
+    display: flex;
     font-size: large;
     text-align: center;
 }
 
-.go{
-    margin: 8px auto;
-    width: 128px;
+.final button{
+    flex: 1 1 0;
+    margin: 2px 1px;
+}
+
+.button-back, .button-close, .button-menu {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+.title {
+    font-size: 18px;
+    flex: auto;
+}
+
+.hx-content {
+    flex: auto;
+}
+
+.hx-detail-statusIcon {
+    top: 58px !important;
 }
