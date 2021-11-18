@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bcc9fce9fcfb9e2096f0",
-    "url": "/fake-yiban/dist/css/app.9072a9de.css"
+    "revision": "d85e27b833ca15733389",
+    "url": "/fake-yiban/dist/css/app.4fcefea2.css"
   },
   {
     "revision": "5e8ced678248d0f8a44c2e0752bc3b02",
@@ -20,16 +20,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/img/menu.c6c92fec.svg"
   },
   {
-    "revision": "ad1cfd1b15255331bce85898c9a9c081",
+    "revision": "ccd4d4ec6bbf252b23160975a2813d17",
+    "url": "/fake-yiban/dist/img/qrcode0.ccd4d4ec.svg"
+  },
+  {
+    "revision": "4f42d1ee19c69626e0744435c0b261a4",
+    "url": "/fake-yiban/dist/img/qrcode1.4f42d1ee.svg"
+  },
+  {
+    "revision": "ab61ba9a26a034f6941bcdf4968db57c",
     "url": "/fake-yiban/dist/index.html"
   },
   {
-    "revision": "bcc9fce9fcfb9e2096f0",
-    "url": "/fake-yiban/dist/js/app.6a36f2d2.js"
+    "revision": "d85e27b833ca15733389",
+    "url": "/fake-yiban/dist/js/app.985b69ac.js"
   },
   {
-    "revision": "9607762db2b1a730c94e",
-    "url": "/fake-yiban/dist/js/chunk-vendors.a8f0d4bb.js"
+    "revision": "d417f697eb6c380082da",
+    "url": "/fake-yiban/dist/js/chunk-vendors.1ab7527b.js"
   },
   {
     "revision": "d962cad20740c8cc61c4814769cf730c",
