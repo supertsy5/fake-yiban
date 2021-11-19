@@ -72,7 +72,7 @@ export default {
     },
     mounted(){
         setInterval(()=>{
-            if(this.time > 0){
+            if(this.time > 1){
                 this.time -= 1;
             }else{
                 this.time = 20;

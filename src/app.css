@@ -1,5 +1,4 @@
 html, body{
-    background-color: white;
     overflow: hidden;
 }
 
@@ -26,7 +25,7 @@ input{
     flex: none;
     height: 48px;
     align-items: center;
-    background-color: #6cb0f9;
+    background-color: #51aeff;
     color: white;
 }
 
@@ -40,8 +39,12 @@ button{
     display: block;
     border: none;
     margin: 1px;
-    background-color: #6cb0f9;
+    background-color: #51aeff;
     color: white;
+}
+
+button:focus{
+    outline: gray solid 1px;
 }
 
 .edit .header{
@@ -52,37 +55,75 @@ h1{
     text-align: center;
 }
 
-.row{
+.edit-title-detail{
     display: flex;
+    margin: 0 15px;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.row.labels{
-    padding-right: 26px;
+.edit-title-detail-dot{
+    background-color: #51aeff;
+    width: 4px;
+    height: 12px;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.edit-detail-content{
+    background-color: white;
+    padding: 2px 15px;
+}
+
+.row{
+    display: flex;
+    height: 28px;
+}
+
+.row.no-delete{
+    margin-right: 26px;
 }
 
 .label{
     flex: 1 1 0;
-    margin: 0 4px;
+    text-align: center;
 }
 
-.delete{
+button.delete{
     width: 24px;
 }
 
-.add{
+button.add{
     width: 64px;
     margin: 1px auto;
 }
 
+button.confirm, button.cancel{
+    flex: 1 1 0;
+}
+
 .final{
     display: flex;
+    flex: none;
     font-size: large;
+    height: 45px;
     text-align: center;
+    background-color: #51aeff;
 }
 
 .final button{
     flex: 1 1 0;
-    margin: 2px 1px;
+    margin: 0;
+    z-index: 129;
+    font-size: 15px;
+}
+
+.final .separator{
+    width: 1px;
+    margin: 8px 0;
+    z-index: 128;
+    background-color: white;
 }
 
 .button-back, .button-close, .button-menu {
@@ -90,15 +131,15 @@ h1{
     aspect-ratio: 1;
 }
 
-.title {
+.title{
     font-size: 18px;
     flex: auto;
 }
 
-.hx-content {
+.hx-content{
     flex: auto;
 }
 
-.hx-detail-statusIcon {
+.hx-detail-statusIcon{
     top: 58px !important;
 }
