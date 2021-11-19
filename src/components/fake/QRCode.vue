@@ -84,11 +84,4 @@ export default {
 }
 </script>
 
-<style src="./fake.css"></style>
-<style src="./780e88b3.css"></style>
-<style src="./41a291b0.chunk.css"></style>
-<style src="./5de02372.chunk.css"></style>
-<style src="./8593bd49.chunk.css"></style>
-<style src="./4c338eb8.chunk.css"></style>
-<style src="./a843def6.chunk.css"></style>
-<style src="./9c25fb71.chunk.css"></style>
+<style src="./9c25fb71.chunk.css" scoped></style>
