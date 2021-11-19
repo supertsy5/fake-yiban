@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7ca73009f503c940d24",
-    "url": "/fake-yiban/dist/css/app.91f24df7.css"
+    "revision": "dd3110ac4e51dda20618",
+    "url": "/fake-yiban/dist/css/app.f39413aa.css"
   },
   {
     "revision": "5e8ced678248d0f8a44c2e0752bc3b02",
@@ -28,11 +28,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/img/qrcode1.4f42d1ee.svg"
   },
   {
-    "revision": "71792e4bbd42a4c54be2555f2eae79a9",
+    "revision": "43efa2f894b345bf43d82729d0afbc65",
     "url": "/fake-yiban/dist/index.html"
   },
   {
-    "revision": "d7ca73009f503c940d24",
+    "revision": "dd3110ac4e51dda20618",
     "url": "/fake-yiban/dist/js/app.fb6b08a7.js"
   },
   {
