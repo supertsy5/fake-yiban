@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "11e14f922927d7ab48d2",
-    "url": "/fake-yiban/dist/css/app.95aaebd4.css"
+    "revision": "d7ca73009f503c940d24",
+    "url": "/fake-yiban/dist/css/app.91f24df7.css"
   },
   {
     "revision": "5e8ced678248d0f8a44c2e0752bc3b02",
@@ -28,16 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/img/qrcode1.4f42d1ee.svg"
   },
   {
-    "revision": "a4f7204fd554ec79ac0bd8399094a91c",
+    "revision": "71792e4bbd42a4c54be2555f2eae79a9",
     "url": "/fake-yiban/dist/index.html"
   },
   {
-    "revision": "11e14f922927d7ab48d2",
-    "url": "/fake-yiban/dist/js/app.de977e41.js"
+    "revision": "d7ca73009f503c940d24",
+    "url": "/fake-yiban/dist/js/app.fb6b08a7.js"
   },
   {
-    "revision": "4080ea51bd86c155c8d1",
-    "url": "/fake-yiban/dist/js/chunk-vendors.5d8ceda2.js"
+    "revision": "0d6bbf40c697b67d246d",
+    "url": "/fake-yiban/dist/js/chunk-vendors.44798c5a.js"
   },
   {
     "revision": "d962cad20740c8cc61c4814769cf730c",
