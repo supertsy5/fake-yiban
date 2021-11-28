@@ -47,7 +47,7 @@ button:focus{
     outline: gray solid 1px;
 }
 
-.header .home{
+.edit .header{
     padding: 0 16px;
 }
 
@@ -91,12 +91,11 @@ h1{
 }
 
 button.delete{
-    aspect-ratio: 1;
+    width: 24px;
 }
 
 button.add{
-    width: 26px;
-    height: 26px;
+    width: 64px;
     margin: 1px auto;
 }
 
@@ -127,7 +126,7 @@ button.confirm, button.cancel{
     background-color: white;
 }
 
-.button-app{
+.button-back, .button-close, .button-menu {
     height: 100%;
     aspect-ratio: 1;
 }
@@ -143,8 +142,4 @@ button.confirm, button.cancel{
 
 .hx-detail-statusIcon{
     top: 58px !important;
-}
-
-.about{
-    text-align: center;
 }

@@ -1,6 +1,18 @@
 <template>
     <div id="root">
         <div class="hx-layout">
+            <div class='header'>
+                <div class='button-back' @click="$emit('exit')">
+                    <img src='./back.svg'/>
+                </div>
+                <div class='title'>{{studentName}}的请销假</div>
+                <div class='button-close'>
+                    <img src='./close.svg'/>
+                </div>
+                <div class='button-menu'>
+                    <img src='./menu.svg'/>
+                </div>
+            </div>
             <main class="hx-content">
                 <div class="wfTitle___Y-ebx">{{studentName}}的请销假</div>
                 <div class="hx-detail">
