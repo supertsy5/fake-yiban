@@ -1,9 +1,24 @@
 <template>
-    <div id='root' class='edit' v-if='page==0'>
+    <div id='root'>
         <div class='header'>
-            <div class='title'>Fake Yiban v0.2.1 (Alpha)</div>
+            <div class='button-app' v-if='page!=0' @click="page=0">
+                <img src='./assets/back.svg'/>
+            </div>
+            <div class='title home' v-if='page==0'>Fake Yiban v0.2.2 (Alpha)</div>
+            <div class='title' v-if='page==-1'>关于</div>
+            <div class='title' v-else-if='page==1'>{{studentName}}的请销假</div>
+            <div class='title' v-else-if='page==2'>请销假</div>
+            <div class='button-app' v-if='page==0' @click='page=-1'>
+                <img src='./assets/about.svg'/>
+            </div>
+            <div class='button-app' v-if='page>0'>
+                <img src='./assets/close.svg'/>
+            </div>
+            <div class='button-app' v-if='page>0'>
+                <img src='./assets/menu.svg'/>
+            </div>
         </div>
-        <div class='content'>
+        <div class='content' v-if='page==0'>
             <div class="edit-title-detail">
                 <div class="edit-title-detail-dot"></div>申请人
             </div>
@@ -33,10 +48,14 @@
                     <div class='row' v-else>
                         <input type='text' v-model='item.name'>
                         <input type='text' v-model='item.value'>
-                        <button class='delete' @click="deletingItem=num">X</button>
+                        <button class='delete' @click="deletingItem=num">
+                            <img src='./assets/delete.svg'/>
+                        </button>
                     </div>
                 </div>
-                <button class='add' @click="items.push({name: '', value: ''})">+</button>
+                <button class='add' @click="items.push({name: '', value: ''})">
+                    <img src='./assets/add.svg'/>
+                </button>
             </div>
             <div class="edit-title-detail">
                 <div class="edit-title-detail-dot"></div>审批进度
@@ -56,10 +75,14 @@
                         <input type='text' v-model='approver.name'>
                         <input type='text' v-model='approver.id'>
                         <input type='text' v-model='approver.time'>
-                        <button class='delete' @click="deletingApprover = num">X</button>
+                        <button class='delete' @click="deletingApprover = num">
+                            <img src='./assets/delete.svg'/>
+                        </button>
                     </div>
                 </div>
-                <button class='add' @click="approvers.push({name: '', id: '', time: ''})">+</button>
+                <button class='add' @click="approvers.push({name: '', id: '', time: ''})">
+                    <img src='./assets/add.svg'/>
+                </button>
             </div>
             <div class="edit-title-detail">
                 <div class="edit-title-detail-dot"></div>已抄送 
@@ -77,21 +100,31 @@
                     <div class='row' v-else>
                         <input type='text' v-model='cc.name'>
                         <input type='text' v-model='cc.id'>
-                        <button class='delete' @click="deletingCC=num">X</button>
+                        <button class='delete' @click="deletingCC=num">
+                            <img src='./assets/delete.svg'/>
+                        </button>
                     </div>
                 </div>
-                <button class='add' @click="ccs.push({name: '', id: ''})">+</button>
+                <button class='add' @click="ccs.push({name: '', id: ''})">
+                    <img src='./assets/add.svg'/>
+                </button>
             </div>
         </div>
-        <div class='final'>
+        <div class='final' v-if='page==0'>
             <button @click='go'>表单详情</button>
             <div class='separator'></div>
             <button @click='page=2'>离返校码</button>
         </div>
+        <fake v-if='page == 1' :student-name='studentName' :studentID="studentID"
+            :items='items' :approvers="approvers" :ccs="ccs" @exit='page=0'></fake>
+        <QRCode v-if='page == 2' @exit='page=0'></QRCode>
+        <div class='about' v-if='page == -1'>
+            <img src='./assets/logo.png'>
+            <h2>Fake Yiban 0.2.2 (Alpha)</h2>
+            <p>By <a href='https://github.com/supertsy5/'>SUPERTSY5</a></p>
+            <p>警告：本程序仅供演示，请勿滥用。一切后果自负。</p>
+        </div>
     </div>
-    <fake v-if='page == 1' :student-name='studentName' :studentID="studentID"
-    :items='items' :approvers="approvers" :ccs="ccs" @exit='page=0'></fake>
-    <QRCode v-if='page == 2' @exit='page=0'></QRCode>
 </template>
 
 <script>
