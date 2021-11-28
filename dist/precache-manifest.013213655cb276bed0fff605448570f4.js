@@ -1,7 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd3110ac4e51dda20618",
-    "url": "/fake-yiban/dist/css/app.f39413aa.css"
+    "revision": "fae60fa4ce6c6c93f49e",
+    "url": "/fake-yiban/dist/css/app.b9166bb6.css"
+  },
+  {
+    "revision": "80c7433456f9e4dace7ea136ccbbe0d2",
+    "url": "/fake-yiban/dist/img/about.80c74334.svg"
+  },
+  {
+    "revision": "d47d282be2990d70b08bd0b498a2a082",
+    "url": "/fake-yiban/dist/img/add.d47d282b.svg"
   },
   {
     "revision": "5e8ced678248d0f8a44c2e0752bc3b02",
@@ -16,6 +24,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/img/close.b2ffde26.svg"
   },
   {
+    "revision": "b6bbbf94adac88238b44ee4cdb29c3ec",
+    "url": "/fake-yiban/dist/img/delete.b6bbbf94.svg"
+  },
+  {
+    "revision": "15eb1df8207605e82523c19b44520aed",
+    "url": "/fake-yiban/dist/img/logo.15eb1df8.png"
+  },
+  {
     "revision": "c6c92fec7fe8ef49f66a014c25049ab2",
     "url": "/fake-yiban/dist/img/menu.c6c92fec.svg"
   },
@@ -28,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-yiban/dist/img/qrcode1.4f42d1ee.svg"
   },
   {
-    "revision": "43efa2f894b345bf43d82729d0afbc65",
+    "revision": "db264bc29da29634a17e4a4367fa8a3c",
     "url": "/fake-yiban/dist/index.html"
   },
   {
-    "revision": "dd3110ac4e51dda20618",
-    "url": "/fake-yiban/dist/js/app.fb6b08a7.js"
+    "revision": "fae60fa4ce6c6c93f49e",
+    "url": "/fake-yiban/dist/js/app.0d5cba75.js"
   },
   {
-    "revision": "0d6bbf40c697b67d246d",
-    "url": "/fake-yiban/dist/js/chunk-vendors.44798c5a.js"
+    "revision": "ee2fc6b83aeadc0d611c",
+    "url": "/fake-yiban/dist/js/chunk-vendors.bffd383d.js"
   },
   {
     "revision": "d962cad20740c8cc61c4814769cf730c",

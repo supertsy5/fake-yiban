@@ -1,17 +1,5 @@
 <template>
 <div id="root">
-    <div class='header'>
-        <div class='button-back' @click="$emit('exit')">
-            <img src='./back.svg'/>
-        </div>
-        <div class='title'>请销假</div>
-        <div class='button-close'>
-            <img src='./close.svg'/>
-        </div>
-        <div class='button-menu'>
-            <img src='./menu.svg'/>
-        </div>
-    </div>
     <div class='hx-content'>
         <div class="qrCode___3iwXY" style="height: 360px;">
             <div>

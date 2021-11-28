@@ -6,6 +6,7 @@ module.exports = {
     publicPath,
     pwa: {
         name: 'Fake Yiban',
+        assetsVersion: '0.2.2',
         themeColor: '#6cb0f9',
         msTileColor: '#6cb0f9',
         manifestOptions: {
