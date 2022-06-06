@@ -150,6 +150,22 @@ button.confirm, button.cancel{
     top: 58px !important;
 }
 
+.stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .about{
     text-align: center;
 }

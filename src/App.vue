@@ -4,7 +4,7 @@
             <div class='button-app' v-if='page!=0' @click="page=0">
                 <img src='./assets/back.svg'/>
             </div>
-            <div class='title home' v-if='page==0'>Fake Yiban v0.2.2 (Alpha)</div>
+            <div class='title home' v-if='page==0'>Fake Yiban v0.2.3 (Alpha)</div>
             <div class='title' v-if='page==-1'>关于</div>
             <div class='title' v-else-if='page==1'>{{studentName}}的请销假</div>
             <div class='title' v-else-if='page==2'>请销假</div>
@@ -120,7 +120,7 @@
         <QRCode v-if='page == 2' @exit='page=0'></QRCode>
         <div class='about' v-if='page == -1'>
             <img src='./assets/logo.png'>
-            <h2>Fake Yiban 0.2.2 (Alpha)</h2>
+            <h2>Fake Yiban 0.2.3 (Alpha)</h2>
             <p>By <a href='https://github.com/supertsy5/'>SUPERTSY5</a></p>
             <p>警告：本程序仅供演示，请勿滥用。一切后果自负。</p>
         </div>

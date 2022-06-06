@@ -84,7 +84,10 @@
                 <a role="button" class="am-button hx-footer_btn" style="color: rgb(87, 191, 242);"
                     aria-disabled="false"><span>转发审批表单</span></a></div>
         </div>
-        <img class="hx-detail-statusIcon" src="./approved.png">
+        <div class='hx-detail-statusIcon'>
+            <img src='./star_back.png'/>
+            <img class='stars' src='./stars.png'/>
+        </div>
     </div>
 </template>
 
