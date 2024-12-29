@@ -6,8 +6,8 @@
             </div>
             <div class='title home' v-if='page==0'>Fake Yiban v0.2.3 (Alpha)</div>
             <div class='title' v-if='page==-1'>关于</div>
-            <div class='title' v-else-if='page==1'>{{studentName}}的请销假</div>
-            <div class='title' v-else-if='page==2'>请销假</div>
+            <div class='title' v-else-if='page==1'>{{studentName}}的请假</div>
+            <div class='title' v-else-if='page==2'>请假</div>
             <div class='button-app' v-if='page==0' @click='page=-1'>
                 <img src='./assets/about.svg'/>
             </div>
